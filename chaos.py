@@ -55,7 +55,7 @@ def find_midpoint(p1: Point, p2: Point):
 
 pg.init()
 screen = pg.display.set_mode((1024, 768))
-pg.window.title = "Patterns of Chaos"
+pg.display.set_caption("Patterns of Chaos")
 clock = pg.time.Clock()
 running = True
 simulation = False
