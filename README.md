@@ -41,7 +41,7 @@ The utility allows users to select 3 to 6 anchor points on a grid. Once the poin
    python chaos.py
    ```
 2. Select 3 to 6 anchor points on the grid by clicking on the desired locations.
-3. Press the start button to begin the simulation.
+3. Press the space to begin the simulation.
 4. Watch as the dots are generated and placed on the grid.
 
 ## License
