@@ -16,7 +16,7 @@ The utility allows users to select 3 to 6 anchor points on a grid. Once the poin
 ## Requirements
 
 - Python 3.x
-- PyGame
+- PyGame-CE
 - Numpy
 
 ## Installation
@@ -50,5 +50,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Acknowledgements
 
-- [PyGame](https://www.pygame.org/)
+- [PyGame-CE](https://pypi.org/project/pygame-ce/)
 - [Numpy](https://numpy.org/)
