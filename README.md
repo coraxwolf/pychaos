@@ -1,6 +1,6 @@
-# PyDotPattern
+# PyChaos
 
-PyDotPattern is a Python utility that generates a pattern of dots based on user-selected anchor points and a random selection process. The project uses PyGame for visualization and Numpy for numerical operations.
+PyChaos is a Python utility that generates a pattern of dots based on user-selected anchor points and a random selection process. The project uses PyGame for visualization and Numpy for numerical operations.
 
 ## Project Description
 
