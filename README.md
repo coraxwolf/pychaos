@@ -23,11 +23,11 @@ The utility allows users to select 3 to 6 anchor points on a grid. Once the poin
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/pydotpattern.git
+   git clone https://github.com/coraxwolf/pychaos.git
    ```
 2. Navigate to the project directory:
    ```sh
-   cd pydotpattern
+   cd pychaos
    ```
 3. Install the required packages:
    ```sh
@@ -38,7 +38,7 @@ The utility allows users to select 3 to 6 anchor points on a grid. Once the poin
 
 1. Run the main script:
    ```sh
-   python main.py
+   python chaos.py
    ```
 2. Select 3 to 6 anchor points on the grid by clicking on the desired locations.
 3. Press the start button to begin the simulation.
