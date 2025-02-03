@@ -66,8 +66,6 @@ last_dot = Point(0, 0)
 
 screen.fill("black")
 
-print("Before Game Loop")
-
 while running:
   # Draw Anchors
   for anchor in anchors:
@@ -78,7 +76,6 @@ while running:
     # Run Simulation
     iterations += 1
     roll = roll_die()
-    print("Simulation Run: "+ str(iterations) + " -- Rolled: " + str(roll) + " -- Last Dot: (" + str(last_dot.x) + ", " + str(last_dot.y) + ")")
     if last_dot.x == 0 and last_dot.y == 0:
       midpoint = Point(0, 0)
       match len(anchors):
@@ -140,26 +137,20 @@ while running:
             print("Not enough anchors placed to start simulation")
             break
           simulation = True
-          print("Running Simulation")
       else:
         if event.key == pg.K_SPACE:
           simulation = False
-          print("Pausing Simulation")
     # Place Anchors
     if event.type == pg.MOUSEBUTTONDOWN: 
-      print("Mouse Click Detected")
       if simulation == False and anchors_set == False and len(anchors) < 6:
         if len(anchors) == 5:
           anchor = Anchor(Point(pg.mouse.get_pos()[0], pg.mouse.get_pos()[1]))
-          print("Placing Anchor " + str(len(anchors) + 1) + " at (" + str(anchor.point.x) + ", " + str(anchor.point.y) + ")")
           anchors.append(anchor)
           anchors_set = True
         else:
           anchor = Anchor(Point(pg.mouse.get_pos()[0], pg.mouse.get_pos()[1]))
-          print("Placing Anchor " + str(len(anchors) + 1) + " at (" + str(anchor.point.x) + ", " + str(anchor.point.y) + ")")
           anchors.append(anchor)
 # End of Event Loop
 
 # Exit Application
-print("Quitting")
 pg.quit()
