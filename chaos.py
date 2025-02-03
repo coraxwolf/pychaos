@@ -49,8 +49,8 @@ def set_anchor_values(anchors):
       exit()
   
 def find_midpoint(p1: Point, p2: Point):
-  x = (p2.x - p1.x) / 2
-  y = (p2.y - p1.y) / 2
+  x = (p2.x + p1.x) / 2
+  y = (p2.y + p1.y) / 2
   return Point(x, y)
 
 pg.init()
@@ -77,7 +77,7 @@ while running:
     iterations += 1
     roll = roll_die()
     if last_dot.x == 0 and last_dot.y == 0:
-      midpoint = Point(0, 0)
+      midpoint = Point(anchors[0].point.x, anchors[0].point.y)
       match len(anchors):
         case 3:
           midpoint = find_midpoint(anchors[0].point, anchors[2].point)
@@ -87,10 +87,11 @@ while running:
           midpoint = find_midpoint(anchors[0].point, anchors[4].point)
         case 6:
           midpoint = find_midpoint(anchors[0].point, anchors[5].point)
+      print("First Point: (" + str(midpoint.x) + ", " + str(midpoint.y) + ")")
       pg.draw.circle(screen, "white", (midpoint.x, midpoint.y), 2)
       last_dot = midpoint
     else:
-      point = Anchor(Point(0, 0))
+      point = Anchor(Point(last_dot.x, last_dot.y))
       for anchor in anchors:
         for value in anchor.values:
           if value == roll:
